@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: D3D3D3; -fx-border-color: black; -fx-border-radius: 10; -fx-border-insets: 20;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.productapp.ControllerAddProduct">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+    <children>
+        <Label layoutX="30.0" layoutY="30.0" text="Add Product">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="addProdSearchTxt" layoutX="685.0" layoutY="30.0" opacity="0.75" prefHeight="26.0" prefWidth="175.0" promptText="Search by Part ID or Name" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: WHITE; -fx-border-color: GREY;" />
+        <TableView layoutX="410.0" layoutY="80.0" prefHeight="220.0" prefWidth="450.0">
+            <columns>
+                <TableColumn prefWidth="53.0" text="Part ID" />
+                <TableColumn prefWidth="145.0" text="Part Name" />
+                <TableColumn prefWidth="130.0" text="Inventory Level" />
+                <TableColumn prefWidth="121.0" text="Price/Cost per Unit" />
+            </columns>
+        </TableView>
+        <Button fx:id="addProdBtn" layoutX="753.0" layoutY="312.0" mnemonicParsing="false" text="Add" />
+        <TableView layoutX="410.0" layoutY="350.0" prefHeight="220.0" prefWidth="450.0">
+            <columns>
+                <TableColumn prefWidth="53.0" text="Part ID" />
+                <TableColumn prefWidth="145.0" text="Part Name" />
+                <TableColumn prefWidth="130.0" text="Inventory Level" />
+                <TableColumn prefWidth="121.0" text="Price/Cost per Unit" />
+            </columns>
+        </TableView>
+        <Button fx:id="removeAssocBtn" layoutX="710.0" layoutY="590.0" mnemonicParsing="false" onAction="#removeAssocPart" text="Remove Associated Part" />
+        <Button fx:id="saveProdBtn" layoutX="710.0" layoutY="635.0" mnemonicParsing="false" text="Save" />
+        <Button fx:id="cancelAddBtn" layoutX="804.0" layoutY="635.0" mnemonicParsing="false" onAction="#cancelHandler" text="Cancel" />
+        <Label layoutX="60.0" layoutY="120.0" text="ID" />
+        <Label layoutX="60.0" layoutY="170.0" text="Name" />
+        <Label layoutX="60.0" layoutY="220.0" text="Inv" />
+        <Label layoutX="60.0" layoutY="270.0" text="Price" />
+        <Label layoutX="60.0" layoutY="320.0" text="Max" />
+        <Label layoutX="220.0" layoutY="320.0" text="Min" />
+        <TextField editable="false" layoutX="110.0" layoutY="116.0" opacity="0.5" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: WHITE; -fx-border-color: BLACK;" text="Auto Gen - Disabled" />
+        <TextField layoutX="110.0" layoutY="167.0" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: WHITE; -fx-border-color: BLACK;" />
+        <TextField layoutX="110.0" layoutY="216.0" prefWidth="100.0" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: WHITE; -fx-border-color: BLACK;" />
+        <TextField layoutX="110.0" layoutY="266.0" prefWidth="100.0" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: WHITE; -fx-border-color: BLACK;" />
+        <TextField layoutX="110.0" layoutY="316.0" prefHeight="26.0" prefWidth="100.0" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: WHITE; -fx-border-color: BLACK;" />
+        <TextField layoutX="260.0" layoutY="316.0" prefWidth="100.0" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: WHITE; -fx-border-color: BLACK;" />
+    </children>
+</AnchorPane>
